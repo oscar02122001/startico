@@ -1278,11 +1278,38 @@ a {
 }
 
 .comments__container {
-  padding: 127px 80px 167px;
+  padding-top: 127px;
+  padding-bottom: 167px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.comments__container::before {
+  position: absolute;
+  width: 208px;
+  height: 270px;
+  top: -100px;
+  right: 0;
+  background-image: url("../img/commits-top.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.comments__container::after {
+  position: absolute;
+  width: 280px;
+  height: 270px;
+  bottom: 100px;
+  left: -80px;
+  background-image: url("../img/comments-end.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
 }
 
 .comments__title {
@@ -1329,6 +1356,7 @@ a {
   -webkit-box-shadow: 0 0 7px #DDF0A7;
           box-shadow: 0 0 7px #DDF0A7;
   cursor: pointer;
+  z-index: 3;
 }
 
 .comments__box:nth-of-type(2) {
@@ -1423,5 +1451,186 @@ a {
   font-size: 16px;
   line-height: 24px;
   color: #49616E;
+}
+
+.plans__container {
+  padding-top: 132px;
+  padding-bottom: 132px;
+}
+
+.plans__title {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  color: #162E3C;
+  text-align: center;
+}
+
+.plans__disc {
+  font-size: 17px;
+  line-height: 27px;
+  margin-top: 24px;
+  text-align: center;
+  color: #49616E;
+}
+
+.plans__typs {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+hr {
+  height: 1px;
+}
+
+.plans__box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 32px;
+  width: calc((100% - 64px) /3);
+  margin-top: 144px;
+  margin-right: 32px;
+  color: #fff;
+  border-radius: 32px;
+  background-color: #162E3C;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  cursor: pointer;
+}
+
+.plans__box:nth-of-type(3) {
+  margin-right: 0;
+}
+
+.plans__box::before {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-image: url("../img/box-top.svg");
+  background-size: cover;
+  right: 32px;
+  content: '';
+}
+
+.plans__box:hover {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  background-color: #DDF0A7;
+  color: #162E3C;
+  transition: 0.3s ease all;
+  -webkit-transition: 0.3s ease all;
+  -moz-transition: 0.3s ease all;
+  -ms-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.plans__box-disc {
+  margin-top: 80px;
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 7px;
+}
+
+.plans__box-price {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 67px;
+}
+
+.plans__mo {
+  font-size: 32px;
+  line-height: 42px;
+}
+
+.plans__year {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+
+.plans__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+
+.plans__include {
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+.plans__itom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.plans__itom:last-child {
+  margin-bottom: 0;
+}
+
+.plans__itom-circle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  background-color: #222;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.plans__get-link {
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
