@@ -1,0 +1,32 @@
+@mixin reset-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@mixin title {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin btn {
+    padding: 2px 10px;
+    background-color: #DDF0A7;
+    border-radius: 64px;
+    font-size: 15px;
+    line-height: 24px;
+    color: $maincolor;
+    border: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    &:hover{
+        background-color: #fff;
+        border:2px solid #DDF0A7;
+    }
+
+    &:active{
+        color: #666;
+    }
+}

@@ -1,0 +1,124 @@
+.faster {
+    margin-top: 107px;
+    overflow: hidden;
+}
+
+.faster__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        width: 170px;
+        height: 92px;
+        top: 0;
+        right: -125px;
+        background-image: url("../img/faster-water.svg");
+        background-repeat: no-repeat;
+        content: '';
+    }
+}
+
+.faster__wrap {
+    max-width: 596px;
+
+}
+
+.faster__img {
+    width: 600px;
+    height: 600px;
+    // margin-right: 80px;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+}
+
+.faster__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 27px;
+    @include title;
+    font-size: 40px;
+    line-height: 48px;
+    color: $maincolor;
+}
+
+.faster__disc {
+    font-size: 18px;
+    line-height: 27px;
+    color: #49616E;
+    margin-bottom: 22px;
+
+}
+
+.faster__btn {
+    @include btn;
+    margin-bottom: 15px;
+}
+
+.faster__get-link {
+    margin-right: 16px;
+    background-color: #F5F5F5;
+    border-color: $maincolor;
+}
+
+.faster__free-link {
+    color: $maincolor;
+    padding-right: 19px;
+    position: relative;
+
+    &::after {
+        display: block;
+        position: absolute;
+        width: 6px;
+        height: 10px;
+        top: 40%;
+        right: 0;
+        background-image: url("../../img/free-link-fast.svg");
+        content: '';
+    }
+
+    &:active {
+        color: #666;
+    }
+}
+
+.faster__btn-link {
+    color: $maincolor;
+}
+
+.faster__maker {
+    position: absolute;
+    bottom: 48px;
+    left: calc(50% - 400px);
+
+    &::after {
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        background-image: url("../img/maker.svg");
+        top: 36px;
+        right: 36px;
+        content: '';
+    }
+}
+
+.faster__maker-num {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    line-height: 42px;
+    color: #162E3C;
+
+}
+
+.faster__maker-disc {
+    font-size: 20px;
+    line-height: 30px;
+    color: #162E3C;
+
+}

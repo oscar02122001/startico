@@ -1,0 +1,120 @@
+.startup {
+    margin-top: 128px;
+}
+
+.startup__container {
+    padding: 128px 64px;
+    align-items: center;
+    text-align: center;
+    background-color: $getcolor;
+    border-radius: 48px;
+    -webkit-border-radius: 48px;
+    -moz-border-radius: 48px;
+    -ms-border-radius: 48px;
+    -o-border-radius: 48px;
+}
+
+.startup__title {
+    @include title;
+    max-width: 704px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    font-size: 40px;
+    line-height: 48px;
+    color: #162E3C;
+
+}
+
+.startup__main-disc {
+    max-width: 744px;
+    margin: 0 auto;
+    margin-bottom: 62px;
+    font-size: 18px;
+    line-height: 27px;
+    color: $maincolor;
+}
+
+.startup__list {
+    @include reset-list;
+    display: flex;
+    margin-bottom: 48px;
+}
+
+.startup__itom {
+    padding: 156px 54px 31px 54px;
+    width: calc((100% - 64px) /2);
+    background-color: $maincolor;
+    margin-right: 32px;
+    color: #fff;
+    // flex-wrap: wrap;
+    // box-sizing: border-box;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+
+    &:last-child {
+        margin-right: 0
+    }
+
+    &--result {
+        position: relative;
+        &::before {
+            position: absolute;
+            width: 101px;
+            height: 100px;
+            top: 32px;
+            left: calc(50% - 50px);
+            background-image: url("../img/result.svg");
+            content: '';
+        }
+    }
+
+    &--work {
+        position: relative;
+        &::before {
+            position: absolute;
+            width: 101px;
+            height: 100px;
+            top: 42px;
+            left: calc(50% - 40px);
+            background-image: url("../img/work.svg");
+            background-repeat: no-repeat;
+            content: '';
+        }
+    }
+
+    &--profit {
+        position: relative;
+        &::before {
+            position: absolute;
+            width: 101px;
+            height: 100px;
+            top: 49px;
+            left: calc(50% - 45px);
+            background-image: url("../img/profit.svg");
+            background-repeat: no-repeat;
+            content: '';
+        }
+    }
+}
+
+.startup__itom-title {
+    @include title;
+    font-size: 20px;
+    line-height: 28px;
+    color: #fff;
+}
+
+.startup__disc {
+    margin-top: 17px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.startup__get-link {
+    background-color: transparent;
+    border: 2px solid $maincolor;
+    margin-right: 24px;
+}

@@ -1,0 +1,63 @@
+.get-link {
+    display:inline-block;
+    position: relative;
+    padding: 14px 26px;
+    border: 2px solid $getcolor;
+    color: $maincolor;
+    font-size: 15px;
+    line-height: 24px;
+    border-radius: 64px;
+    z-index: 1;
+    -webkit-border-radius: 64px;
+    -moz-border-radius: 64px;
+    -ms-border-radius: 64px;
+    -o-border-radius: 64px;
+
+    &:hover {
+        color: #fff;
+
+    }
+
+    &::before {
+        transition: 0.5s ease all;
+        -webkit-transition: 0.5s ease all;
+        -moz-transition: 0.5s ease all;
+        -ms-transition: 0.5s ease all;
+        -o-transition: 0.5s ease all;
+        position: absolute;
+        right: 50%;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        content: '';
+        background-color: $maincolor;
+        // border: 2px solid transparent;
+    }
+
+    &:hover::before {
+        transition: 0.5s ease all;
+        -webkit-transition: 0.5s ease all;
+        -moz-transition: 0.5s ease all;
+        -ms-transition: 0.5s ease all;
+        -o-transition: 0.5s ease all;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        z-index: -1;
+        border-radius: 64px;
+        -webkit-border-radius: 64px;
+        -moz-border-radius: 64px;
+        -ms-border-radius: 64px;
+        -o-border-radius: 64px;
+    }
+
+    &:active{
+        // background-color: #fff;
+        color: #666;
+        opacity: 0.5;
+    }
+    &:active::before{
+        background-color: #fff;
+    }
+}

@@ -1,0 +1,134 @@
+.straight {
+    margin-top: 128px;
+}
+
+.straight__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.straight__wrap {
+    // display: block;
+    max-width: 600px;
+    // position: relative;
+}
+
+.straight__title {
+    @include title;
+    font-size: 40px;
+    line-height: 48px;
+    color: $maincolor;
+    margin-bottom: 27px;
+}
+
+.straight__disc {
+    max-width: 574px;
+    margin-bottom: 38px;
+    font-size: 18px;
+    line-height: 27px;
+    color: $maincolor;
+
+}
+
+.straight__list {
+    @include reset-list;
+    display: flex;
+    margin-bottom: 31px;
+    // position: relative;
+}
+
+.straight__itom {
+    width: calc((100% - 26px) /1);
+    margin-right: 26px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.straight__maker {
+    display: block;
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
+    background-color: $getcolor;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+
+    &--meetings {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background-image: url("../img/meetings.svg");
+            left: calc(50% - 16px);
+            top: calc(50% - 16px);
+            content: '';
+
+        }
+    }
+
+    &--support {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background-image: url("../img/support.svg");
+            left: calc(50% - 16px);
+            top: calc(50% - 16px);
+            content: '';
+
+        }
+
+    }
+}
+
+.straight__itom-title {
+    @include title;
+    font-size: 20px;
+    line-height: 28px;
+    color: $maincolor;
+    margin-bottom: 17px;
+}
+
+.straight__img {
+    width: 600px;
+    height: 600px;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+}
+
+.straight__get-link {
+    background-color: #F5F5F5;
+    border: 2px solid $maincolor;
+    margin-right: 16px;
+}
+
+.straight__maker-big {
+    position: absolute;
+    right: calc(50% - 435px);
+    bottom: 60px;
+
+    &::after{
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        right: 0;
+        top: 36px;
+        right: 36px;
+        background-image: url("../img/skull.svg");
+        content: '';
+    }
+}

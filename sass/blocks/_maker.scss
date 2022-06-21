@@ -1,0 +1,26 @@
+.maker{
+    // position: absolute;
+    display: block;
+    padding: 24px 221px 24px 24px;
+    background-color: #DDF0A7;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+
+    &::before {
+        position: absolute;
+        width: 72px;
+        height: 72px;
+        background-color: $maincolor;
+        border-radius: 16px;
+        right: 24px;
+        content: '';
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+    }
+
+}

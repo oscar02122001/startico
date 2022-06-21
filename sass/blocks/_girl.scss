@@ -1,0 +1,32 @@
+.girl__container {
+    margin-top: -320px;
+    position: relative;
+    // overflow: hidden;
+
+
+}
+
+.girl__img {
+    z-index: 2;
+}
+
+.girl__watch {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    padding: 12px 40px;
+    top: calc(50% - 26px);
+    left: calc(50% - 116px);
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: #162E3C;
+    background-color: #DDF0A7;
+    border: 2px solid transparent;
+    border-radius: 64px;
+
+    &:hover{
+        background-color: #fff;
+        border:2px solid #DDF0A7;
+    }
+}

@@ -1,0 +1,43 @@
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    margin-top: 72px;
+    
+}
+.freez{
+    overflow: hidden;
+}
+img{
+    max-width: 100%;
+}
+
+.visually-hidden{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+a {
+    text-decoration: none;
+    // color: $maincolor;
+}
+
+@media only screen and (max-width:768px){
+    body{
+        margin-top: 56px;
+    }
+}

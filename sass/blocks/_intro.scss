@@ -1,0 +1,134 @@
+.intro {
+    background-color: $maincolor;
+    overflow: hidden;
+}
+
+.intro__container {
+    padding: 96px 0px 456px 0px;
+    position: relative;
+    // overflow: hidden;
+
+    &::before {
+        // display: block;
+        position: absolute;
+        width: 320px;
+        height: 275px;
+        bottom: 160px;
+        left: -100px;
+        background-image: url("../img/girl-top.svg");
+        z-index: 0;
+        content: '';
+    }
+}
+
+.intro__wrap {
+    max-width: 768px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    // overflow: hidden;
+    // z-index: 1;
+    position: relative;
+
+    &::before{
+        // display:inline-block;
+        position: absolute;
+        width: 270px;
+        height: 250px;
+        left: -380px;
+        z-index: 0;
+        background-image: url("../img/intro-left.svg");
+        background-repeat: no-repeat;
+        content: '';
+    }
+
+    &::after{
+        // display:inline-block;
+        position: absolute;
+        width: 270px;
+        height: 250px;
+        bottom: 0;
+        right: -430px;
+        background-image: url("../img/intro-right.svg");
+        background-repeat: no-repeat;
+        content: '';
+    }
+}
+
+.intro__title {
+    margin: 0;
+    padding: 0;
+    max-width: 695px;
+    margin: 0 auto;
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 67px;
+    text-align: center;
+    color: #FFFFFF;
+   
+
+}
+
+.intro__disc {
+    margin: 0;
+    padding: 0;
+    max-width: 713px;
+    margin: 0 auto;
+    margin-top: 26px;
+    margin-bottom: 38px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.intro__get-link {
+    background-color: $getcolor;
+    margin-right: 16px;
+}
+
+.intro__free-link {
+    margin-left: 16px;
+    font-size: 15px;
+    line-height: 16px;
+    color: #FFFFFF;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        width: 6px;
+        height: 10px;
+        top: 6px;
+        right: -13px;
+        background-image:url("../img/free-link.svg") ;
+        content: '';
+    }
+
+    &:hover{
+        color: #666;
+    }
+}
+
+.intro__imgs{
+    display: flex;
+    margin-top: 56px;
+    justify-content: center;
+}
+.intro__img-link{
+    margin-right: 40px;
+
+    &--last{
+        margin-right: 0;
+    }
+}
+.intro__img{
+    display: block;
+}
+
+.intro__girl{
+    display: block;
+    // position: absolute;
+    margin-top: 129px;
+    margin-bottom: -320px;
+}
