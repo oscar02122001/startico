@@ -12,6 +12,19 @@
     -moz-border-radius: 48px;
     -ms-border-radius: 48px;
     -o-border-radius: 48px;
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        display: block;
+        position: absolute;
+        width: 180px;
+        height: 206px;
+        background-image: url("../img/startup-bef.svg");
+        top: -70px;
+        right: 64px;
+        content: '';
+    }
 }
 
 .startup__title {

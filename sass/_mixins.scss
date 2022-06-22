@@ -21,12 +21,74 @@
     cursor: pointer;
     border: 2px solid transparent;
 
-    &:hover{
+    &:hover {
         background-color: #fff;
-        border:2px solid #DDF0A7;
+        border: 2px solid #DDF0A7;
     }
 
-    &:active{
+    &:active {
+        color: #666;
+    }
+}
+
+@mixin tools {
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #E5E7EB;
+    color: #162E3C;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+    cursor: pointer;
+    border: none;
+    border: 1px solid #E5E7EB;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &:hover {
+        color: #fff;
+        border: 1px solid #DDF0A7;
+}
+
+    &::before {
+        transition: 500ms ease all;
+        -webkit-transition: 500ms ease all;
+        -moz-transition: 500ms ease all;
+        -ms-transition: 500ms ease all;
+        -o-transition: 500ms ease all;
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: -100%;
+        bottom: 0%;
+        opacity: 0;
+        background-color: $maincolor;
+        //z-index: -1;
+        content: '';
+        border-radius: 32px;
+        -webkit-border-radius: 32px;
+        -moz-border-radius: 32px;
+        -ms-border-radius: 32px;
+        -o-border-radius: 32px;
+}
+
+    &:hover::before{
+        transition: 0.5s ease all;
+        -webkit-transition: 0.5s ease all;
+        -moz-transition: 0.5s ease all;
+        -ms-transition: 0.5s ease all;
+        -o-transition: 0.5s ease all;
+        opacity: 1;
+        z-index: -1;
+        top: 0;
+        //bottom: 0;
+}
+
+    &:active {
         color: #666;
     }
 }

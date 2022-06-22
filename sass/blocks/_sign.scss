@@ -1,0 +1,113 @@
+.sign{
+    position: relative;
+   margin-top: 128px;
+    z-index: 4;
+}
+.sign__container {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    background-color: $getcolor;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    
+
+    &::before{
+        position: absolute;
+        display: block;
+        width: 170px;
+        height: 152px;
+        right: 65px;
+        top: -70px;
+        background-image: url("../img/sign-top.svg");
+        content: '';
+    }
+}
+
+.sign__wrap {
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.sign__title {
+    @include title;
+    max-width: 698px;
+    margin-bottom: 27px;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #162E3C;
+}
+
+.sign__disc {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #162E3C;
+}
+
+.sign__email {
+    width: 368px;
+    height: 52px;
+    margin-right: 16px;
+    padding: 13px 42px 13px 42px;
+    border: none;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+
+
+    &::placeholder {
+        // width: fit-content;
+        display: block;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: left;
+        color: #162E3C;
+
+    }
+}
+
+.sign__sub {
+    padding: 12px 20px;
+    border-radius: 32px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    background-color: $maincolor;
+    color: #fff;
+    border: none;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        color: $maincolor;
+        background-color: #fff;
+    }
+
+
+
+    &:active {
+        color: #666;
+        opacity: 0.7;
+    }
+}
+
+.sign__form-followed {
+    margin-top: 19px;
+    font-size: 11px;
+    line-height: 18px;
+    color: $maincolor;
+}

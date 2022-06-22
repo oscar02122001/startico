@@ -1,0 +1,215 @@
+.blogs__container {
+    text-align: center;
+}
+
+.blogs__btn {
+    @include btn;
+    margin-bottom: 19px;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #162E3C;
+
+}
+
+.blogs__title {
+    @include title;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: $maincolor;
+}
+
+.blogs__disc {
+    margin-bottom: 81px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #49616E;
+    ;
+}
+
+.blogs__itom-img {
+    display: block
+}
+
+.blogs__list {
+    @include reset-list;
+    display: flex;
+    // flex-direction: column;
+}
+
+.blogs__itom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc((100% - 68px) /2);
+    margin-right: 34px;
+    margin-bottom: 80px;
+    border: 1px solid #E5E7EB;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.04));
+    -webkit-filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.04));
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.blogs__itom-btn {
+    @include tools;
+    margin-right: 16px;
+}
+
+.blogs__itom-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding: 24px 32px;
+
+}
+
+.blogs__wrap-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.blogs__read {
+    font-size: 14px;
+    line-height: 21px;
+    color: #162E3C;
+}
+
+.blogs__wrap-middle {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+}
+
+.blogs__itom-title {
+    @include title;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    color: #162E3C;
+}
+
+.blogs__itom-disc {
+    font-size: 16px;
+    line-height: 24px;
+    // text-align: center;
+    color: #49616E;
+
+}
+
+.blogs__circle {
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    background-color: #162E3C;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    &::before {
+        // display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: calc(50% - 5px);
+        left: calc(50% - 5px);
+        background-image: url("../img/blogs-line.svg");
+        content: '';
+    }
+}
+
+.blogs__itom-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    
+}
+
+.blogs__link-wrap {
+    position: relative;
+    display: flex;
+    width: 130px;
+    margin: 0 auto;
+    margin-top: 23px;
+    font-size: 15px;
+    line-height: 16px;
+    color: #162E3C;
+    align-items: center;
+
+}
+
+.blogs__end-btn {
+    position: relative;
+    padding: 12px 26px;
+    border: 2px solid #162E3C;
+    border-radius: 64px;
+    background-color: #F5F5F5;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: #162E3C;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover {
+        color: #F5F5F5;
+    }
+
+    &::before {
+        transition: 0.5s ease all;
+        -webkit-transition: 0.5s ease all;
+        -moz-transition: 0.5s ease all;
+        -ms-transition: 0.5s ease all;
+        -o-transition: 0.5s ease all;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 50%;
+        left: 50%;
+        opacity: 0;
+        background-color: $maincolor;
+        //z-index: -1;
+        border-radius:32px ;
+        content: '';
+        -webkit-border-radius:32px ;
+        -moz-border-radius:32px ;
+        -ms-border-radius:32px ;
+        -o-border-radius:32px ;
+}
+
+    &:hover::before {
+        transition: 0.5s ease all;
+        -webkit-transition: 0.5s ease all;
+        -moz-transition: 0.5s ease all;
+        -ms-transition: 0.5s ease all;
+        -o-transition: 0.5s ease all;
+        opacity: 1;
+        z-index: -1;
+        right: 0;
+        left: 0;
+    }
+    &:active{
+        opacity: 0.5;
+    }
+}
